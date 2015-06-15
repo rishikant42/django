@@ -1,0 +1,27 @@
+{% load static %}
+
+<html>
+<head>
+<title>{% block title %}  {% endblock %}</title>
+
+<link rel="stylesheet" type="text/css" href="{% static "assets/css/default.css" %}">
+<!--script src="{% static "assets/js/jquery-2.0.0.min.js" %}"> </script> 
+<script src="{% static "assets/js/ajax.js" %}"> </script-->
+</head>
+
+<body>
+
+    {% block sidebar %}
+    <ul>
+        <li><a href="/article/all">Article</a></li>
+        <li><a href="/admin/">Admin</a></li>
+    </ul>
+    {% endblock %}
+
+
+{% block content %} {% endblock %}
+
+<img src ="{% static "assets/img/rk.png" %}" width="200"/>
+<script type = "text/javascript" src="{% static "assets/js/rk.js" %}"> </script>
+</body>
+</html>

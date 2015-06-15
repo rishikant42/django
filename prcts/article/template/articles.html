@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}ArticleS {% endblock %}
+
+{% block content %} 
+
+{% if articles.count > 0 %}
+
+{% for article in articles %}
+<div>
+<h2><a href="/article/get/{{article.id}}/">{{article.title}}</a></h2>
+<p>{{ article.body|upper|truncatewords:10 }}</p>
+<p>{{article.likes}} people like this article</p>
+<p>DatePublish : {{article.pub_date}}<p>
+</div>
+{% endfor %}
+
+{% else %}
+<h2>None to Show</h2>
+
+{% endif %}
+
+<h4>For visiting admin site click <a href = "/admin/"> here </a></h4>
+<h4>For creating article click <a href="/article/create/">here</a></h4>
+<h4>For search in article <a href="/search/">here</a></h4>
+{% endblock %}

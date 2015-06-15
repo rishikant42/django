@@ -1,0 +1,17 @@
+{% load static %}
+<html lang="en">
+<head>
+<title>{% block title %}{% endblock %}</title>
+
+<link rel="stylesheet" type="text/css" href="{% static "assets/css/default.css" %}">
+</head>
+<body>
+<h1>My helpful timestamp site</h1>
+{% block content %}{% endblock %}
+{% block footer %}
+<hr>
+<p>Thanks for visiting my site.</p>
+{% endblock %}
+<img src="{% static "assets/img/rk.png" %}">
+</body>
+</html>
